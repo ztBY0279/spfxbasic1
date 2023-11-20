@@ -28,9 +28,11 @@ export interface Lists{
 }
 
 export interface List{
+  Title:string;
   id:string;
   name:string;
   surname:string;
+  Image:string;
 
 }
 
