@@ -66,9 +66,21 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
             <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
           </ul>
       </div>
+      <div class="${styles.box1}">
+
+     
+      <button class="${styles.btn}">Create</button>
+      <button class="${styles.btn}">Read</button>
+      <button class="${styles.btn}">Update</button>
+      <button class="${styles.btn}">Delete</button>
+
+      
+      
+      
+      </div>
     </section>`;
   
- 
+ this.temp();
  
     
   }
@@ -78,7 +90,17 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
 
 
 
+ private temp():void{
 
+  const button = this.domElement.querySelectorAll("button");
+  button.forEach((element)=>{
+    element.addEventListener("click",()=>{
+      element.innerText = "Clicked";
+      console.log("button is clicked:");
+    })
+  })
+    
+ }
 
 
 
